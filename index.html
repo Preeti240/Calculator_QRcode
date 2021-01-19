@@ -1,0 +1,378 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator_QR-code</title>
+    <link rel="shortcut icon" href="img/calc.png">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+
+<script src="https://kit.fontawesome.com/57bed686a4.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script src="js/calculos.js"></script>
+<script src="js/time.js"></script>
+<script src="js/icon.js"></script>
+<script src="js/night.js"></script>
+<script  src="js/qrcode.js"></script>
+<script  src="js/code.js"></script>
+
+<link rel="stylesheet" href="css/calculadorastyle.css">
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:400,600">
+
+</head>
+<body>
+
+
+
+
+   
+
+      <div class="container">
+
+        <div class="panel-heading" align="center">
+
+      
+          <h1>Calculator <sub>Online...</sub></h1> 
+    
+
+          <hr>
+
+          <button type="button" data-switch-contrast class="btn btn-outline-light">
+            <i class="fa fa-moon fa-2x" aria-hidden="true"></i>
+          </button>
+
+        </div>
+   
+        
+
+	      
+        <div class="row">
+         
+
+          <div class="col-sm"> 
+
+            <br>
+            <br>
+
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="img/reloj.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h4 align="center">Time</h4>
+                <h6 class="card-text">
+                  <ul class="timer"> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li id="hours"></li>
+                    <li id="point">:</li>
+                    <li id="min"></li>
+                    <li id="point">:</li>
+                    <li id="sec"></li>
+                    </ul>
+                </h6>
+           
+                <div class="social">
+                  <a href="https://twitter.com/BrayanCorpsee" target="_blank">
+                    <i id="twitter" class="icon-twitter"></i>
+                  </a>
+                  <a href="https://github.com/BrayanCorpse" target="_blank">
+                    <i id="github" class="icon-github"></i>
+                  </a>   
+                  <a href="https://www.linkedin.com/in/brayan-manzano-cortes-54b309129/" target="_blank">
+                  <i id="linkedin" class="icon-linkedin-sign"></i>
+                  </a>  
+                  <a href="mailto:manzanocortesbrayan@gmail.com">
+                  <i id="mail" class="icon-envelope"></i> 
+                  </a>
+                </div>
+      
+              </div>
+            </div>
+        
+          </div>
+
+        
+
+          <div class="col-sm">
+		  
+	<br>
+        <br>
+         
+            <div class="card" style="width: 24rem;">
+                <img class="card-img-top" src="img/calcu.jpg" alt="Card image cap" height="180">
+
+
+                <div class="card-body">
+              
+              <p class="card-text">Perform basic operations by entering figures you want to calculate.</p>
+                </div>
+
+                <ul class="list-group list-group-flush">
+
+                  <div></div>
+
+              <li class="list-group-item">
+                
+                <h6 id="memory"></h6>
+                
+                  <input class="form-control form-control-lg"  id="cifra" name="cifra"  type="text"       placeholder="Calculator..."  value="" >
+
+              </li>
+
+              <li class="list-group-item">
+
+                    <div class="btn-group" role="group" aria-label="Third group">
+
+                        <button type="button" id="encender" class="btn btn-primary">ON</button>
+                
+                        <button type="button" id="apagar" class="btn btn-danger" >OF</button>
+
+                    </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" id="erase" class="btn btn-info">AC</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" id="clean" class="btn btn-dark">C</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="%" id="porcentaje" class="btn btn-outline-dark btn-lg">
+                          <i class="fa fa-percent" aria-hidden="true"></i></button>
+                      </div>
+
+                      
+
+                  </li>
+
+                  <li class="list-group-item">
+
+                  
+                    &nbsp;
+
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="7" id="siete" class="btn btn-secondary btn-lg">7</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="8" id="ocho" class="btn btn-secondary btn-lg">8</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="9" id="nueve" class="btn btn-secondary btn-lg">9</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" id="x" class="btn btn-outline-dark btn-lg " value="x">
+                          <i class="fa fa-times" aria-hidden="true"></i>
+                        </button>
+                      </div>
+
+                  </li>
+
+                  <li class="list-group-item">
+
+                    &nbsp;
+
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="4" id="cuatro" class="btn btn-secondary btn-lg">4</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="5" id="cinco" class="btn btn-secondary btn-lg">5</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="6" id="seis" class="btn btn-secondary btn-lg">6</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="-" id="resta" class="btn btn-outline-dark btn-lg ">
+                          <i class="fa fa-minus" aria-hidden="true"></i>
+                        </button>
+                      </div>
+
+                  </li>
+
+                  <li class="list-group-item">
+
+                    &nbsp;
+
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="1" id="uno" class="btn btn-secondary btn-lg">1</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="2" id="dos" class="btn btn-secondary btn-lg">2</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="3" id="tres" class="btn btn-secondary btn-lg">3</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="+" id="suma" class="btn btn-outline-dark btn-lg ">
+                          <i class="fa fa-plus" aria-hidden="true"></i>
+                        </button>
+                      </div>
+
+                  </li>
+
+                  <li class="list-group-item">
+
+                 
+                    &nbsp;
+
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="0" id="cero" class="btn btn-secondary btn-lg">0</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="." id="punto" class="btn btn-secondary btn-lg">
+                          <strong>.</strong>
+                        </button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" id="igual" class="btn btn-outline-primary btn-lg">
+                          <i class='fas fa-equals'></i>
+                        </button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                      
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="÷" id="division" class="btn btn-outline-dark btn-lg">
+                          <i class='fas fa-divide'></i>
+                        </button>
+                      </div>
+
+                  </li>
+
+                </ul>
+                <div class="card-body">
+                  <a href="#"  class="card-link">Other solutions</a>
+                  <a href="https://github.com/Preeti240/Calculator_QRcode" target="_blank" class="card-link">Code</a>
+                  <a href="https://gonative.io/share/rawnqe" target="_blank" class="card-link">
+                  APK Version
+                  </a>
+
+                </div>
+              </div>
+
+          </div>
+          
+         
+          
+          <div class="col-sm">
+            
+            <br>
+            <br>
+
+            <div class="card" style="width: 22rem;">
+
+              <li class="list-group-item" style="background-color:rgb(98, 73, 185);">
+
+            <label for="exampleFormControlTextarea1" >
+              Magic Text Qr
+            </label>
+            <textarea class="form-control" id="valor"  value="" rows="5" placeholder="type the text you wish to generate" required></textarea>
+            <br>
+              </li>
+       
+              
+              <li class="list-group-item">
+
+          <button type="button" id="qr" class="btn btn-outline-success  btn-block" onClick="createQrCode()">
+              Generate QR Code
+          </button> 
+
+              </li>
+
+              <li class="list-group-item">
+
+              <button type="button" class="btn btn-outline-danger  btn-block"  onClick="limpiar()">
+                Clean
+              </button>
+
+              </li>
+
+              <li class="list-group-item">
+
+              <div id="qrcode" align="center"></div>
+
+              </li>
+ 
+
+              
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    
+    
+      <footer id="footer" role="contentinfo">
+        <div class="container">
+          <div class="row row-bottom-padded-sm">
+            <div class="col-md-12">
+              <p class="copyright text-center">Developed by Preeti. &copy; 2021 | Calculator </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    
+      
+</body>
+</html>
+
